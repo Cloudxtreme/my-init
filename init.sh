@@ -31,4 +31,4 @@ fi
 
 
 cp -f ./.gitconfig ~/.gitconfig
-
+cp -f ./.vimrc ~/.vimrc
