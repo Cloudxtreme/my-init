@@ -1,0 +1,14 @@
+ams-nl-ping.vultr.com  200
+
+lon-gb-ping.vultr.com  174
+
+hnd-jp-ping.vultr.com  167 多线特别优秀
+
+ga-us-ping.vultr.com 208
+
+wa-us-ping.vultr.com 174 189
+
+tx-us-ping.vultr.com 154
+
+lax-ca-us-ping.vultr.com 178 优秀
+
