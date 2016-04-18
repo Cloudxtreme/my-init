@@ -20,8 +20,12 @@ echo $DIST
 if [ "$DIST" == "Ubuntu" ]; then
 	apt-get update
 	apt-get -y --force-yes install vim
-	apt-get -y --force-yes install git
 	apt-get -y --force-yes install python-pip
+	pip install shadowsocks
+elif [ "$DIST" == "CentOS" ]; then
+	yum makecache
+	yum install -y vim
+	yum install -y python-setuptools && easy_install pip
 	pip install shadowsocks
 fi
 
