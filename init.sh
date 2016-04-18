@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 DIST=""
@@ -21,12 +21,14 @@ if [ "$DIST" == "Ubuntu" ]; then
 	apt-get update
 	apt-get -y --force-yes install vim
 	apt-get -y --force-yes install python-pip
+    apt-get -y --force-yes install nginx
 	pip install shadowsocks
 elif [ "$DIST" == "CentOS" ]; then
 	yum makecache
 	yum install -y vim
 	yum install -y python-setuptools && easy_install pip
 	pip install shadowsocks
+    yum install -y nginx
 fi
 
 
