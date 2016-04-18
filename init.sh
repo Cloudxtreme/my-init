@@ -29,3 +29,6 @@ elif [ "$DIST" == "CentOS" ]; then
 	pip install shadowsocks
 fi
 
+
+cp -f ./.gitconfig ~/.gitconfig
+
