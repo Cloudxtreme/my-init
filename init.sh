@@ -24,11 +24,13 @@ if [ "$DIST" == "Ubuntu" ]; then
     apt-get -y --force-yes install nginx
 	pip install shadowsocks
 elif [ "$DIST" == "CentOS" ]; then
+    ./configure-iptables
 	yum makecache
 	yum install -y vim
 	yum install -y python-setuptools && easy_install pip
 	pip install shadowsocks
     yum install -y nginx
+    yum install -y php-fpm
 fi
 
 
