@@ -31,6 +31,7 @@ elif [ "$DIST" == "CentOS" ]; then
 	pip install shadowsocks
     yum install -y nginx
     yum install -y php-fpm
+    yum install -y php-domxml-php4-php5
 fi
 
 
