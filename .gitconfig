@@ -1,4 +1,5 @@
 [user]
 	name = andyhu0777
 	email = andyhu0777@gmail.com
-	credention = store
+[credential]
+	helper = store
