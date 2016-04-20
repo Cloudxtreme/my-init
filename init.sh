@@ -23,6 +23,7 @@ if [ "$DIST" == "Ubuntu" ]; then
 	apt-get -y --force-yes install python-pip
     apt-get -y --force-yes install nginx
 	pip install shadowsocks
+    apt-get -y --force-yes install nodejs
 elif [ "$DIST" == "CentOS" ]; then
     ./configure-iptables
 	yum makecache
@@ -34,6 +35,7 @@ elif [ "$DIST" == "CentOS" ]; then
     yum install -y php-xml # fore centos 7 
     yum install -y epel-release
     yum install -y nginx && systemctl enable nginx
+    yum install -y nodejs
 fi
 
 
