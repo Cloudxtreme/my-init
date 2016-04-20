@@ -28,12 +28,14 @@ elif [ "$DIST" == "CentOS" ]; then
 	yum makecache
 	yum install -y vim
 	yum install -y python-setuptools && easy_install pip
-	pip install shadowsocks
-    yum install -y nginx
-    yum install -y php-fpm
+	pip install shadowsocks && chkconfig --level 2345 ssservice on
+    yum install -y php-fpm && systemctl enable php-fpm
     yum install -y php-domxml-php4-php5
+    yum install -y epel-release
+    yum install -y nginx && systemctl enable nginx
 fi
 
 
 cp -f ./.gitconfig ~/.gitconfig
 cp -f ./.vimrc ~/.vimrc
+cp -f ./ssservice /etc/init.d/
