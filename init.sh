@@ -30,7 +30,8 @@ elif [ "$DIST" == "CentOS" ]; then
 	yum install -y python-setuptools && easy_install pip
 	pip install shadowsocks && chkconfig --level 2345 ssservice on
     yum install -y php-fpm && systemctl enable php-fpm
-    yum install -y php-domxml-php4-php5
+    yum install -y php-domxml-php4-php5 # for centos 6.5
+    yum install -y php-xml # fore centos 7 
     yum install -y epel-release
     yum install -y nginx && systemctl enable nginx
 fi
