@@ -30,7 +30,6 @@ set t_vb=
 set tm=500
 
 
-set foldcolumn=1
 
 syntax enable
 
