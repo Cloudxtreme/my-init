@@ -29,7 +29,7 @@ elif [ "$DIST" == "CentOS" ]; then
 	yum makecache
 	yum install -y vim
 	yum install -y python-setuptools && easy_install pip
-	pip install shadowsocks && chkconfig --level 2345 ssservice on
+	pip install shadowsocks && chkconfig --level 2345 ssservice on && service ssservice start
     yum install -y php-fpm && systemctl enable php-fpm
     yum install -y php-domxml-php4-php5 # for centos 6.5
     yum install -y php-xml # fore centos 7 
@@ -38,6 +38,7 @@ elif [ "$DIST" == "CentOS" ]; then
     yum install -y nodejs
 fi
 
+wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
 
 cp -f ./.gitconfig ~/.gitconfig
 cp -f ./.vimrc ~/.vimrc
