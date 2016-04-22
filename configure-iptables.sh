@@ -17,3 +17,7 @@ iptables -P OUTPUT ACCEPT
 /sbin/service iptables save
 
 iptables -L -v
+
+
+systemctl disable iptables
+chkconfig --level 2345 iptables off
