@@ -17,6 +17,11 @@ fi
 echo $DIST
 
 
+cp -f ./.gitconfig ~/.gitconfig
+cp -f ./.vimrc ~/.vimrc
+cp -f ./ssservice /etc/init.d/
+
+
 if [ "$DIST" == "Ubuntu" ]; then
 	apt-get update
 	apt-get -y --force-yes install vim
@@ -41,6 +46,3 @@ fi
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
 
-cp -f ./.gitconfig ~/.gitconfig
-cp -f ./.vimrc ~/.vimrc
-cp -f ./ssservice /etc/init.d/
